@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User and Task Management</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .user-list, .task-list {
+            margin-top: 20px;
+        }
+        .user, .task {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>User and Task Management</h1>
+
+    <!-- User Form -->
+    <form id="userForm">
+        <h2>Add New User</h2>
+        <label for="userName">Name:</label>
+        <input type="text" id="userName" required>
+
+        <label for="userEmail">Email:</label>
+        <input type="email" id="userEmail" required>
+
+        <button type="submit">Add User</button>
+    </form>
+
+    <!-- Task Form -->
+    <form id="taskForm">
+        <h2>Add New Task</h2>
+        <label for="taskTitle">Title:</label>
+        <input type="text" id="taskTitle" required>
+
+        <label for="taskDescription">Description:</label>
+        <textarea id="taskDescription" required></textarea>
+
+        <label for="taskUser">Assign to User ID:</label>
+        <input type="text" id="taskUser" required>
+
+        <button type="submit">Add Task</button>
+    </form>
+
+    <!-- Display Users -->
+    <div class="user-list">
+        <h2>Users</h2>
+        <div id="users"></div>
+    </div>
+
+    <!-- Display Tasks -->
+    <div class="task-list">
+        <h2>Tasks</h2>
+        <div id="tasks"></div>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
